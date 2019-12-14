@@ -4,6 +4,14 @@ using namespace ev3dev;
 
 int main() {
     sound::speak("Hello, I am Robot!", true);
+    for (auto i = 0; i != 3; ++i)
+    {
+
+        char buffer[512];
+        sprintf(buffer, "Attempt number %i. Hello, Andryusha. Artyom. Katya. Maxim. My name is ee vee 3. I am Robot!", i+1);
+        sound::speak(buffer, true);
+    }
+    /*
     sound::tone({
             {392, 350, 100}, {392, 350, 100}, {392, 350, 100}, {311.1, 250, 100},
             {466.2, 25, 100}, {392, 350, 100}, {311.1, 250, 100}, {466.2, 25, 100},
@@ -25,5 +33,5 @@ int main() {
             {392.00, 300, 150}, {311.13, 250, 100}, {466.16, 25, 100}, {392, 700}
             },
             true
-            );
+            );*/
 }
